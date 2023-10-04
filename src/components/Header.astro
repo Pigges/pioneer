@@ -1,13 +1,22 @@
 ---
 
+
+function calculateAge(birthday) { // birthday is a date
+   const ageDifMs = Date.now() - birthday;
+   const ageDate = new Date(ageDifMs); // miliseconds from epoch
+   return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
 ---
 
 <header class="flex justify-between py-5 px-10 bg-slate-800 items-center">
-    <section class="left flex align-middle gap-10 items-center">
-        <figure class="rounded-full flex items-center justify-center">
+    <section class="left relative flex align-middle gap-10 items-center">
+        <figure class="rounded-full flex items-center justify-center overflow-hidden">
             <img src="/assets/avatar.webp" alt="Avatar">
         </figure>
         <p class="text-2xl"><strong>Brendan Eich</strong></p>
+        <div class="dropdown absolute left-0 p-5 rounded-lg bg-slate-500">
+            <p>Age: {calculateAge(new Date('4 July 1961'))}</p>
+        </div>
     </section>
     <section class="center">
         Center
@@ -15,9 +24,9 @@
     <section class="right">
         <nav>
             <ul class="flex gap-10">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contributions</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contributions">Contributions</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </nav>
     </section>
@@ -26,6 +35,15 @@
     header section figure {
         width: 50px;
         height: 50px;
-        overflow: hidden;
+    }
+
+    header section .dropdown {
+        display: none;
+        top: calc(100% + 10px);
+        background-color: black;
+    }
+
+    header section figure:hover ~ .dropdown {
+        display: flex;
     }
 </style>

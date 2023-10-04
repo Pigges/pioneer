@@ -5,3 +5,7 @@
 html {
     color: #eee;
 }
+
+img {
+    user-select: none;
+}
