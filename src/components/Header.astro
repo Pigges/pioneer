@@ -8,7 +8,7 @@ function calculateAge(birthday) { // birthday is a date
 }
 ---
 
-<header class="flex justify-between py-5 px-10 bg-slate-800 items-center">
+<header class="flex flex-col lg:flex-row justify-between py-5 px-10 bg-slate-800 items-center">
     <section class="left relative flex align-middle gap-10 items-center">
         <figure class="rounded-full flex items-center justify-center overflow-hidden">
             <img src="/assets/avatar.webp" alt="Avatar">
@@ -18,8 +18,8 @@ function calculateAge(birthday) { // birthday is a date
             <p>Age: {calculateAge(new Date('4 July 1961'))}</p>
         </div>
     </section>
-    <section class="center">
-        Center
+    <section class="center hidden lg:block">
+        <p id="quote"></p>
     </section>
     <section class="right">
         <nav>
@@ -47,3 +47,7 @@ function calculateAge(birthday) { // birthday is a date
         display: flex;
     }
 </style>
+<script>
+    const quotes = ["Javascript would either die quickly or be around for at least 20 years.", "The Brave idea is to have a frictionless Bitcoin."];
+    document.querySelector('#quote').innerText = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`
+</script>

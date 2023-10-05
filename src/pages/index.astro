@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Brendan Eich">
-	<section class="flex flex-col items-center max-w-lg m-auto mt-10">
-		<figure class="rounded-lg overflow-hidden">
+	<section class="flex flex-col items-center max-w-lg mx-auto mt-10 rounded-xl p-5 bg-slate-100 dark:bg-slate-800 shadow-md">
+		<figure class="rounded-full w-1/2 overflow-hidden hover:skew-y-12">
 			<picture>
 				<source srcset="/assets/avatar.webp">
 				<img src="/assets/avatar.jpg" alt="Brendan Eich" style="width:auto;">
@@ -12,6 +12,9 @@ import Layout from '../layouts/Layout.astro';
 		</figure>
 		<p class="text-2xl font-bold">Brendan Eich</p>
 		<p>Born 4th of July 1961 in Pittsburgh. Studied Mathematics and Computer Science. Got his Master's degree from the University of Illinois.</p>
-		<a href="/about">Read more...</a>
+		<a href="/about" class="bg-slate-500 py-2 px-5 rounded-lg hover:scale-110 mt-10 text-white">Read more...</a>
+	</section>
+	<section class="flex flex-col items-center">
+		<h2 class="text-2xl font-bold">Contributions</h2>
 	</section>
 </Layout>
