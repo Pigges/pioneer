@@ -1,5 +1,5 @@
 ---
-
+import HeaderLink from './HeaderLink.astro';
 
 function calculateAge(birthday) { // birthday is a date
    const ageDifMs = Date.now() - birthday;
@@ -24,9 +24,9 @@ function calculateAge(birthday) { // birthday is a date
     <section class="right">
         <nav>
             <ul class="flex gap-10">
-                <li><a href="/">Home</a></li>
-                <li><a href="/contributions">Contributions</a></li>
-                <li><a href="/about">About</a></li>
+                <li><HeaderLink href="/">Home</HeaderLink></li>
+                <li><HeaderLink href="/contributions">Contributions</HeaderLink></li>
+                <li><HeaderLink href="/about">About</HeaderLink></li>
             </ul>
         </nav>
     </section>

@@ -3,7 +3,23 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Contributions">
-	<p class="text-3xl font-bold underline">
-		Contributions
-	</p>
+	<section class="flex flex-col mx-auto max-w-2xl items-center">
+		<p class="text-3xl font-bold underline">
+			Contributions
+		</p>
+		<p class="text-2xl" id="javascript">Javascript</p>
+		<p>As a employee at Netscape Communications Corporation, he developed Javascript, which had much of the functionality of Scheme and the syntax of Java. It only took him 10 days to complete his first revision of the language.</p>
+		<p>Javascript can be found in all kinds of places. Most notably on the web, using the browser. Javascript helps with making the site dynamic and can make stuff happen on the page. Something that can't be done with plain HTML and CSS. You can for example fetch data from servers and render it in the browser after the document have been setInterval. Frameworks such as React and Vue highly depends on this as everything on the page is rendered throught Javascript.</p>
+		<p>Javascript have through NodeJS and newer project even taken a step into the server realm. Through Javascript, you can build an entire full-stack application in the same language.</p>
+		<p>Desktop applications may even be run using Javascript.</p>
+
+		<p class="text-2xl" id="mozilla">Mozilla</p>
+		<p>After his time at Netscape, he co-founded the non-profit Mozilla Foundation. The main intent was to manage open-source contributions to the Netscape source code, as they inherited the codebase. Mozilla is the main entity improving the standards for todays web.</p>
+		
+		<p class="text-2xl" id="brave">Brave Software</p>
+		<p>After some opinionated conflicts, Eich left his position at Mozilla and founded a new company named Brave Software. They focus on developing a privacy friendly chromium-based web browser.</p>
+		<p>Through the browser, they try to reshape the dominant ad-model. They do this through implementing a cryptocurrency called BAT (Basic Attention Token), which pays the user for viewing ads. The user can then choose to support the creators they think deserve it.</p>
+		<p>It also have a built in shield that protects the user from a lot of trackers and ads. Through this, it manages to reduce fingerprinting as users appear more similar.</p>
+		<p>The browser also features built in Tor-tabs, where you can directly in Brave connect to the Tor-network for even better privacy.</p>
+	</section>
 </Layout>
